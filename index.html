@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Literacy Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- For Infographics -->
+
+    <style>
+        /* Apply a finance-related background image with noise effect */
+        body {
+            background-image: url('https://www.skeps.com/hs-fs/hubfs/fintech-graphic.jpg?width=1000&name=fintech-graphic.jpg'); /* Replace with your finance-related image URL */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            position: relative;
+            color: #ffecec;
+        }
+
+        /* Noise effect using CSS */
+        body::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/aspaper.png'); /* You can use a noise pattern image */
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Styling for the content */
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: rgba(0, 0, 0, 0.6); /* Transparent black background for sections */
+            border-radius: 8px;
+        }
+
+        h2, h3 {
+            margin-bottom: 10px;
+        }
+
+        input[type="number"], button {
+            padding: 10px;
+            margin-top: 10px;
+            width: 100%;
+        }
+        
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Financial Literacy 101</h1>
+        <nav>
+            <a href="#video-section">Start Course</a>
+            <a href="#quiz-section">Take Quiz</a>
+            <a href="#infographics-section">Infographics</a>
+            <a href="#calculators-section">Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Video Section -->
+        <section id="video-section">
+            <h2>Interactive Video</h2>
+            <div class="video-container">
+                <video id="financial-video" controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p id="quiz-prompt" class="hidden">Time for a question!</p>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz-section" class="hidden">
+            <h2>Quiz</h2>
+            <div id="quiz-container">
+                <!-- Questions will be inserted dynamically -->
+            </div>
+            <button id="submit-quiz" class="hidden">Submit Answers</button>
+            <div id="quiz-score" class="hidden">
+                <h3>Your Score: <span id="score-percent"></span></h3>
+            </div>
+        </section>
+
+        <!-- Infographics Section -->
+        <section id="infographics-section">
+            <h2>Financial Infographics</h2>
+            <canvas id="infographic-chart"></canvas>
+        </section>
+
+        <!-- Financial Calculators Section -->
+        <section id="calculators-section">
+            <h2>Financial Calculators</h2>
+
+            <!-- Loan Calculator -->
+            <div id="loan-calculator">
+                <h3>Loan Calculator</h3>
+                <label for="loan-amount">Loan Amount:</label>
+                <input type="number" id="loan-amount" placeholder="Amount ($)">
+                <label for="loan-term">Loan Term (years):</label>
+                <input type="number" id="loan-term" placeholder="Years">
+                <label for="loan-rate">Interest Rate (%):</label>
+                <input type="number" id="loan-rate" placeholder="Annual Interest Rate">
+                <button id="calculate-loan">Calculate</button>
+                <p id="loan-result"></p>
+            </div>
+
+            <!-- Savings Calculator -->
+            <div id="savings-calculator">
+                <h3>Savings Calculator</h3>
+                <label for="initial-savings">Initial Savings:</label>
+                <input type="number" id="initial-savings" placeholder="Amount ($)">
+                <label for="monthly-contribution">Monthly Contribution:</label>
+                <input type="number" id="monthly-contribution" placeholder="Contribution ($)">
+                <label for="savings-rate">Annual Interest Rate (%):</label>
+                <input type="number" id="savings-rate" placeholder="Interest Rate">
+                <label for="savings-years">Years to Save:</label>
+                <input type="number" id="savings-years" placeholder="Years">
+                <button id="calculate-savings">Calculate</button>
+                <p id="savings-result"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Financial Literacy Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

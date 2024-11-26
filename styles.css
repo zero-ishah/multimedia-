@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #829dcf;
+    color: #fff; /* White text color */
+}
+
+header {
+    background: #4caf50;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #d9ffd9;
+}
+
+main {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Video Section */
+.video-container {
+    max-width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#financial-video {
+    max-width: 100%;
+    border: 3px solid #4caf50;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+#financial-video:hover {
+    transform: scale(1.02);
+}
+
+/* Hidden Elements */
+.hidden {
+    display: none;
+}
+
+/* Buttons */
+button {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #financial-video {
+        width: 100%;
+    }
+
+    #quiz-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    canvas {
+        max-width: 90%;
+    }
+}
+
+/* Quiz Styling */
+#quiz-section {
+    margin-top: 30px;
+}
+
+#quiz-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Transparent background */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#quiz-container label {
+    display: block;
+    margin: 5px 0;
+    font-size: 1rem;
+    color: white; /* White text */
+}
+
+#quiz-score {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+/* Infographic Section */
+#infographics-section {
+    margin-top: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5); /* Transparent background */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+canvas {
+    max-width: 60%;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Calculator Section */
+#calculators-section {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.5); /* Transparent background */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"] {
+    width: calc(100% - 20px);
+    max-width: 250px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border: 1px solid #4caf50;
+    outline: none;
+    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+#loan-calculator, #savings-calculator {
+    margin-bottom: 40px;
+}
+
+#loan-calculator h3, #savings-calculator h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: white; /* White text */
+}
+
+#loan-result, #savings-result {
+    font-size: 1rem;
+    margin-top: 15px;
+    color: #4caf50;
+    font-weight: bold;
+}
